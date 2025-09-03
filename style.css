@@ -21,6 +21,10 @@ body {
   max-width: 1200px;
 }
 
+.container-md {
+  max-width: 740px;
+}
+
 li {
   list-style: none;
 }
@@ -51,4 +55,22 @@ h2 {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+/* PHOTO CAROUSEL */
+
+.photo-feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+.photo-feature .carousel-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-feature img {
+  width: 100%;
 }
