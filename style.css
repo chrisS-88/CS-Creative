@@ -1,0 +1,54 @@
+:root {
+  --txt-sm: 18px;
+  --txt-md: 24px;
+  --txt-lg: 30px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+/* UTILITY */
+
+.container-lg {
+  max-width: 1200px;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAV */
+
+.nav-wrapper {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: var(--txt-lg);
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: var(--txt-sm);
+  text-transform: uppercase;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
