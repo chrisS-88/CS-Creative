@@ -26,17 +26,19 @@
     <section class="photo-feature">
       <div class="carousel-control">
         <div class="next-prev-btns">
-          <span class="control prev-slide">Prev</span>
+          <span class="control" id="prev">Prev</span>
           <span>/</span>
-          <span class="control next-slide">Next</span>
+          <span class="control" id="next">Next</span>
         </div>
-        <div class="show-thumbnails">
+        <div class="control show-thumbnails">
           <span>Show Thumbnails</span>
         </div>
       </div>
-      <div class="image-carousel container-md">
-        <img src="./imgs/sunset-1.jpg" alt="Ocean sunset" />
+      <div id="carousel-view" class="carousel container-md">
+        <!-- <img src="./imgs/gallery_1.jpg" id="main-img" alt="Gallery Image" class="carousel-img active" /> -->
       </div>
+      <div id="grid-view" class="grid" style="display: none"></div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>
