@@ -24,6 +24,10 @@ body {
 }
 
 .container-md {
+  max-width: 900px;
+}
+
+.container-sm {
   max-width: 740px;
 }
 
@@ -102,4 +106,29 @@ h2 {
 
 .carousel-img.active {
   opacity: 1;
+}
+
+/* CONTACT PAGE */
+
+.page-wrapper {
+  margin: 0 auto;
+  height: calc(100vh - 200px);
+  display: flex;
+  background: blueviolet;
+}
+
+.flex-content {
+  background: #978686;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 38%;
+}
+
+.form {
+  background: #98d5b4;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

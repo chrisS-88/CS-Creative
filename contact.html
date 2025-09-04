@@ -18,24 +18,27 @@
         <h2>Photography</h2>
       </div>
       <ul class="nav-list">
-        <li class="nav-item active">Home</li>
+        <li class="nav-item">Home</li>
         <li class="nav-item" id="featured">Portfolio</li>
-        <li class="nav-item">Contact</li>
+        <li class="nav-item active">Contact</li>
       </ul>
     </nav>
-    <section class="photo-feature">
-      <div class="carousel-control">
-        <div class="next-prev-btns">
-          <span class="control" id="prev">Prev</span>
-          <span>/</span>
-          <span class="control" id="next">Next</span>
-        </div>
-        <div class="control show-thumbnails">
-          <span>Show Thumbnails</span>
-        </div>
+    <section class="page-wrapper container-md">
+      <div class="flex-content">
+        <h3>Say Hi!</h3>
+        <h4>
+          Email me at <a href="mailto:chris@email.co.uk">chris@email.co.uk</a>
+          or use the form.
+        </h4>
       </div>
-      <div id="carousel-view" class="carousel container-sm"></div>
-      <div id="grid-view" class="grid" style="display: none"></div>
+      <form class="form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="6"></textarea>
+      </form>
     </section>
     <script src="./script.js"></script>
   </body>
