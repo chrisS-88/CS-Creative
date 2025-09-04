@@ -1,6 +1,7 @@
 :root {
+  --txt-xsm: 14px;
   --txt-sm: 18px;
-  --txt-md: 24px;
+  --txt-md: 22px;
   --txt-lg: 30px;
 }
 
@@ -12,6 +13,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: var(--txt-sm);
   letter-spacing: 2px;
 }
 
@@ -55,22 +57,49 @@ h2 {
   display: flex;
   align-items: center;
   gap: 2rem;
+  font-size: var(--txt-xsm);
 }
 
 /* PHOTO CAROUSEL */
 
 .photo-feature {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: end;
+  gap: 5rem;
   margin: 0 2rem;
+}
+
+.control {
+  cursor: pointer;
 }
 
 .photo-feature .carousel-control {
   display: flex;
   flex-direction: column;
+  align-items: end;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-size: var(--txt-xsm);
 }
 
-.photo-feature img {
+.carousel {
+  position: relative;
+  width: 700px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.carousel-img {
+  position: absolute;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-img.active {
+  opacity: 1;
 }
