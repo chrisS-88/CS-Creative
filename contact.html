@@ -24,21 +24,25 @@
       </ul>
     </nav>
     <section class="page-wrapper container-md">
-      <div class="flex-content">
+      <div class="flex-content-left">
         <h3>Say Hi!</h3>
         <h4>
           Email me at <a href="mailto:chris@email.co.uk">chris@email.co.uk</a>
           or use the form.
         </h4>
       </div>
-      <form class="form">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="6"></textarea>
-      </form>
+
+      <div class="flex-content-right">
+        <form class="form">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6"></textarea>
+          <button class="btn" id="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
     </section>
     <script src="./script.js"></script>
   </body>

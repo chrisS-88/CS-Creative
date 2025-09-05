@@ -1,20 +1,34 @@
 :root {
+  /* font */
   --txt-xsm: 14px;
   --txt-sm: 18px;
   --txt-md: 22px;
   --txt-lg: 30px;
+  /* weight */
+  --light: 300;
+  --normal: 400;
+  --bolder: 600;
+
+  /* colours */
+  --charcoal: #2b2b2b;
+  --white: #ffffff;
+  --grey: #d1d5db;
+  --green: #0f5132;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: var(--charcoal);
+  font-family: "Montserrat", sans-serif;
+  font-weight: var(--light);
+  letter-spacing: 1.2px;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   font-size: var(--txt-sm);
-  letter-spacing: 2px;
+  line-height: 1.3;
 }
 
 /* UTILITY */
@@ -29,6 +43,10 @@ body {
 
 .container-sm {
   max-width: 740px;
+}
+
+a {
+  text-decoration: none;
 }
 
 li {
@@ -49,19 +67,20 @@ li {
 h1 {
   font-size: var(--txt-lg);
   letter-spacing: 4px;
-  font-weight: 300;
 }
 
 h2 {
   font-size: var(--txt-sm);
   text-transform: uppercase;
+  font-weight: var(--bolder);
+  color: var(--grey);
 }
 
 .nav-list {
   display: flex;
   align-items: center;
   gap: 2rem;
-  font-size: var(--txt-xsm);
+  font-size: var(--txt-sm);
 }
 
 /* PHOTO CAROUSEL */
@@ -111,24 +130,72 @@ h2 {
 /* CONTACT PAGE */
 
 .page-wrapper {
-  margin: 0 auto;
-  height: calc(100vh - 200px);
+  width: 70%;
   display: flex;
-  background: blueviolet;
+  margin: 2rem auto;
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.132);
 }
 
-.flex-content {
-  background: #978686;
+.flex-content-left {
+  background: var(--green);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
   width: 38%;
+  padding: 0 2.5rem;
+}
+
+.flex-content-left h3,
+.flex-content-left h4,
+.flex-content-left a {
+  color: var(--grey);
+}
+
+.flex-content-left h3 {
+  font-size: var(--txt-lg);
+}
+
+.flex-content-left h4 {
+  font-size: var(--txt-sm);
+}
+
+.flex-content-right {
+  flex: 1;
+  padding: 2rem 0 3rem;
 }
 
 .form {
-  background: #98d5b4;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  margin: 0 auto;
+  width: 68%;
+}
+
+.form label {
+  font-size: var(--txt-xsm);
+}
+
+.form input,
+.form textarea {
+  padding: 0.25rem;
+  font-size: var(--txt-sm);
+  margin: 0.2rem 0 1rem 0;
+  outline: none;
+}
+
+.form .btn {
+  width: 160px;
+  padding: 0.5rem 0;
+  margin: 1rem auto 0;
+  font-size: var(--txt-sm);
+  font-weight: var(--normal);
+  background: var(--grey);
+  border: 1px solid var(--charcoal);
+  border-radius: 5px;
+}
+
+.form .btn:hover {
+  background: #d1d5dbcb;
+  cursor: pointer;
 }
