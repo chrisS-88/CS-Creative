@@ -18,9 +18,9 @@
         <h2>Photography</h2>
       </div>
       <ul class="nav-list">
-        <li class="nav-item">Home</li>
-        <li class="nav-item" id="featured">Portfolio</li>
-        <li class="nav-item active">Contact</li>
+        <a href="./index.html"><li class="nav-item">Home</li></a>
+        <a href="#"><li class="nav-item" id="featured">Portfolio</li></a>
+        <a href="#"><li class="nav-item active">Contact</li></a>
       </ul>
     </nav>
     <section class="page-wrapper container-md">
@@ -33,14 +33,14 @@
       </div>
 
       <div class="flex-content-right">
-        <form class="form">
+        <form method="POST" data-netlify="true" class="form" name="Contact">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" />
           <label for="email">Email</label>
           <input type="email" name="email" id="email" />
           <label for="message">Message</label>
-          <textarea name="message" id="message" rows="6"></textarea>
-          <button class="btn" id="submit-btn" type="submit">Submit</button>
+          <textarea name="message" id="message" rows="5"></textarea>
+          <button class="btn" id="submit-btn" type="submit">Send</button>
         </form>
       </div>
     </section>
