@@ -143,11 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
   const cameraSound = document.getElementById("camera-sound");
 
-  form.addEventListener("submit", (e) => {
-    cameraSound.currentTime = 0;
-    cameraSound.play();
-    triggerFlash();
-  });
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      cameraSound.currentTime = 0;
+      cameraSound.play();
+      triggerFlash();
+    });
+  }
 
   // EVENT LISTENERS
   document.getElementById("next").addEventListener("click", nextImg);
