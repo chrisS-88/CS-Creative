@@ -83,7 +83,11 @@ h2 {
   font-size: var(--txt-sm);
 }
 
-/* PHOTO CAROUSEL */
+.nav-list .active {
+  font-weight: var(--bolder);
+}
+
+/* GALLERY-PHOTO CAROUSEL */
 
 .photo-feature {
   display: flex;
@@ -127,15 +131,24 @@ h2 {
   opacity: 1;
 }
 
-/* GRID VIEW */
+/* GALLERY-GRID VIEW */
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .thumb {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.thumb:hover {
+  scale: 1.025;
+  cursor: pointer;
 }
 
 /* CONTACT PAGE */
