@@ -74,6 +74,9 @@ h2 {
   text-transform: uppercase;
   font-weight: var(--bolder);
   color: var(--grey);
+  background: var(--green);
+  width: fit-content;
+  padding: 0 0.2rem;
 }
 
 .nav-list {
@@ -151,7 +154,67 @@ h2 {
   cursor: pointer;
 }
 
+/* CHALLENGE PAGE */
+
+.challenge-page {
+  margin: 2rem auto;
+}
+
+.challenge-page .title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-wrapper h3 {
+  font-size: var(--txt-md);
+}
+
+.title-wrapper p {
+  max-width: 800px;
+  text-align: center;
+}
+
+.title-wrapper .bold {
+  font-weight: var(--bolder);
+}
+
+.frame-game-wrapper {
+  background: linear-gradient(145deg, #0f513297, #0f51323a);
+  height: 230px;
+  padding: 4rem 1rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.132);
+}
+
+.frame-game-wrapper h4,
+.frame-game-wrapper .theme {
+  font-size: var(--txt-md);
+}
+
+.frame-game-wrapper .theme {
+  font-weight: var(--bolder);
+}
+
 /* CONTACT PAGE */
+
+.screen-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
 
 .page-wrapper {
   width: 70%;
@@ -222,4 +285,61 @@ h2 {
 .form .btn:hover {
   background: #d1d5dbcb;
   cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer-wrapper {
+  margin-top: 6rem;
+}
+
+.top-footer {
+  padding: 2rem 0;
+  background: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.top-footer a {
+  color: var(--grey);
+}
+
+.top-footer i {
+  color: var(--green);
+  font-size: 1.5rem;
+}
+
+.top-footer .socials-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.links-wrapper a {
+  text-transform: uppercase;
+  font-size: var(--txt-xsm);
+  opacity: 0.8;
+}
+
+.bottom-footer {
+  text-align: center;
+  background: var(--green);
+}
+
+.bottom-footer p {
+  font-size: var(--txt-xsm);
+  color: var(--grey);
+  opacity: 0.8;
+  padding: 0.5rem;
 }
