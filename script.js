@@ -50,14 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("show-thumbnails").addEventListener("click", () => {
     const gridView = document.getElementById("grid-view");
+    const carouselControl = document.getElementById("carousel-control");
 
     if (gridView.style.display === "none") {
       gridView.innerHTML = "";
+      carouselControl.style.display = "none";
+
       galleryImages.forEach((src, i) => {
         const img = document.createElement("img");
         img.src = src;
         img.classList.add("thumb");
         img.addEventListener("click", () => {
+          carouselControl.style.display = "block";
+
           currentIndex = i;
           updateCarousel();
           gridView.style.display = "none";
