@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // NEXT/PREV IMG- % IS CLEVER TRICK TO HAVE IMG CYCLE BACK TO START
+  // NEXT/PREV IMG - % IS CLEVER TRICK TO HAVE IMG CYCLE BACK TO START
   const nextImg = () => {
     currentIndex = (currentIndex + 1) % galleryImages.length;
     updateCarousel();
@@ -45,6 +45,33 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
     updateCarousel();
   };
+
+  // SWAP TO GRID LAYOUT + CLICK IMG TO GO TO THAT IMG IN CAROUSEL
+
+  document.getElementById("show-thumbnails").addEventListener("click", () => {
+    const gridView = document.getElementById("grid-view");
+
+    if (gridView.style.display === "none") {
+      gridView.innerHTML = "";
+      galleryImages.forEach((src, i) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.classList.add("thumb");
+        img.addEventListener("click", () => {
+          currentIndex = i;
+          updateCarousel();
+          gridView.style.display = "none";
+          carouselView.style.display = "block";
+        });
+        gridView.appendChild(img);
+      });
+      gridView.style.display = "grid";
+      carouselView.style.display = "none";
+    } else {
+      gridView.style.display = "none";
+      carouselView.style.display = "block";
+    }
+  });
 
   // EVENT LISTENERS
   document.getElementById("next").addEventListener("click", nextImg);

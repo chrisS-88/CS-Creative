@@ -127,6 +127,17 @@ h2 {
   opacity: 1;
 }
 
+/* GRID VIEW */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.thumb {
+  width: 100%;
+}
+
 /* CONTACT PAGE */
 
 .page-wrapper {
