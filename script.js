@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cameraSound = document.getElementById("camera-sound");
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
     cameraSound.currentTime = 0;
     cameraSound.play();
     triggerFlash();
