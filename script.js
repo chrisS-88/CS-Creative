@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
           img.loading = "lazy";
           img.classList.add("thumb");
           img.addEventListener("click", () => {
-            carouselControl.style.display = "block";
+            carouselControl.style.display = "flex";
 
             currentIndex = i;
             updateCarousel();
